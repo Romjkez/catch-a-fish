@@ -10,7 +10,7 @@ body{
     height:100%;
     width:100%;
     background:url("img/ocean.jpg") no-repeat;
-    background-size:auto 100%;
+    background-size:covers;
     z-index: -1;
 }
 #container{
