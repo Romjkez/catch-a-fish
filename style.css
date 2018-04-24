@@ -1,0 +1,238 @@
+body{
+    padding:0;
+    margin:0;
+    overflow:hidden;
+}
+#ocean{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background:url("img/ocean.jpg") no-repeat;
+    background-size:auto 100%;
+    z-index: -1;
+}
+#container{
+
+}
+#fish1{
+    position: absolute;
+    width:50px;
+    height:50px;
+    animation:fish1 4s infinite both;
+}
+#fish2{
+    width:65px;
+    position: absolute;
+    height:55px;
+    animation:fish2 5s infinite both;
+}
+#fish3{
+    width:60px;
+    position: absolute;
+    height:60px;
+    animation:fish3 4500ms infinite both;
+}
+#fish4{
+    height:80px;
+    width:70px;
+    position: absolute;
+    animation:fish4 4200ms infinite both;
+}
+#fish5{
+    height:70px;
+    width:70px;
+    position: absolute;
+    animation:fish5 4100ms infinite both;
+}
+#shark{
+    position: absolute;
+    height:200px;
+    width:auto;
+    animation:shark 6s infinite linear both;
+}
+.vodorosli{
+    position: absolute;
+    width:190px;
+    height:190px;
+    animation: vodorosli 3s infinite both;
+}
+.vodorosli.first{
+    bottom:-3%;
+    left:0;
+}
+.vodorosli.second{
+    bottom:-2%;
+    left:7%;
+}
+.vodorosli.third{
+    bottom:-3%;
+    left:15%;
+}
+.vodorosli.fourth{
+    bottom:-4%;
+    left:20%;
+}
+.vodorosli.fifth{
+    bottom:-2%;
+    left:25%;
+}
+.vodorosli.sixth{
+    bottom:-4%;
+    left:31%;
+}
+.vodorosli.seventh{
+    bottom:-2%;
+    left:39%;
+}
+.vodorosli.eighth{
+    bottom:-3%;
+    left:44%;
+}
+.vodorosli.ninth{
+    bottom:-4%;
+    left:57%;
+}
+.vodorosli.tenth{
+    bottom:-2%;
+    left:63%;
+}
+.vodorosli.v11{
+    bottom:-3%;
+    left:69%;
+}
+.vodorosli.v12{
+    bottom:-4%;
+    left:78%;
+}
+.vodorosli.v13{
+    bottom:-2%;
+    left:85%;
+}
+@keyframes fish1 {
+    0%{
+        top:1%;
+        left:0;
+        transform:scale(1.00);}
+    25%{
+        transform:scale(1.5);
+        left:30%;
+        top:5%;}
+    50%{
+        top:10%;
+        left:50%;
+        transform:scale(1.0);}
+    75%{
+        top:5%;
+        left:75%;
+        transform:scale(1.5);}
+    100%{
+        top:2%;
+        left:110%;
+        transform:scale(1.00);}
+}
+@keyframes fish2 {
+    0%{
+        top:10%;
+        left:0;
+        transform:scale(1.00);}
+    25%{
+        top:20%;
+        left:29%;
+        transform:scale(1.2);}
+    50%{
+        top:5%;
+        left:60%;
+        transform:scale(1.05);}
+    75%{
+        top:10%;
+        left:80%;
+        transform:scale(1.25);}
+    100%{
+        top:15%;
+        left:110%;
+        transform:scale(1.05);}
+}
+@keyframes fish3 {
+    0%{
+        top:20%;
+        left:0;
+        transform:scale(1.00);}
+    25%{
+        top:15%;
+        left:20%;
+        transform:scale(1.15);}
+    50%{
+        transform:scale(1.06);
+        left:55%;
+        top:35%;}
+    75%{
+        transform:scale(1.2);
+        left:75%;
+        top:35%;}
+    100%{
+        top:40%;
+        left:110%;
+        transform:scale(1.04);}
+}
+@keyframes fish4 {
+    0%{
+        top:50%;
+        left:-1%;
+        transform:scale(1.00);}
+    25%{
+        top:59%;
+        left:24%;
+        transform:scale(1.2);}
+    50%{
+        transform:scale(1.04);
+        left:55%;
+        top:35%;}
+    75%{
+        transform:scale(1.2);
+        left:81%;
+        top:38%;}
+    100%{
+        top:38%;
+        left:110%;
+        transform:scale(1.04);}
+}
+@keyframes fish5 {
+    0%{
+        top:70%;
+        left:-1%;
+        transform:scale(1.01);}
+    25%{
+        top:70%;
+        left:15%;
+        transform:scale(1.13);}
+    50%{
+        transform:scale(1.03);
+        left:49%;
+        top:55%;}
+    75%{
+        transform:scale(1.15);
+        left:78%;
+        top:65%;}
+    100%{
+        top:80%;
+        left:110%;
+        transform:scale(1.04);}
+}
+@keyframes shark {
+    0%{
+        transform:rotate(15deg);
+        left:-25%;
+        top:50%;
+    }
+    100%{
+        transform:rotate(0deg);
+        left:110%;
+        top:75%;
+    }
+}
+@keyframes vodorosli {
+    50%{height:250px;}
+    100%{height:190px;}
+}
