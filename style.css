@@ -3,60 +3,117 @@ body{
     margin:0;
     overflow:hidden;
 }
+#preview{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    animation:bg 15s infinite both;
+    z-index:10;
+}
+#btn{
+    position:absolute;
+    top:0;bottom:0;left:0;right:0;
+    margin:auto;
+    display:block;
+    border-radius:100%;
+    box-shadow:0px 0px 5px white;
+    transition: box-shadow 500ms;
+}
+#btn:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 15px #eeeeee;
+}
 #ocean{
     position:absolute;
     top:0;
     left:0;
     height:100%;
     width:100%;
-    background:url("img/ocean.jpg") no-repeat;
-    background-size:covers;
+    background:url("img/ocean.jpg") no-repeat fixed;
+    background-size:cover;
     z-index: -1;
 }
 #container{
-
+}
+.fish{
 }
 #fish1{
     position: absolute;
     width:50px;
     height:50px;
     animation:fish1 4s infinite both;
+    -moz-animation: fish1 4s infinite both;
 }
 #fish2{
     width:65px;
     position: absolute;
     height:55px;
     animation:fish2 5s infinite both;
+    -moz-animation:fish2 5s infinite both;
 }
 #fish3{
     width:60px;
     position: absolute;
     height:60px;
-    animation:fish3 4500ms infinite both;
+    animation:fish3 4500ms 500ms infinite both;
+    -moz-animation:fish3 4500ms 500ms infinite both;
 }
 #fish4{
     height:80px;
     width:70px;
     position: absolute;
     animation:fish4 4200ms infinite both;
+    -moz-animation:fish4 4200ms infinite both;
 }
 #fish5{
     height:70px;
     width:70px;
     position: absolute;
-    animation:fish5 4100ms infinite both;
+    animation:fish5 4100ms 1s both;
+    -moz-animation:fish5 4100ms 1s both;
+    animation-play-state: paused;
+}
+#fish6{
+    height:90px;
+    width:90px;
+    position: absolute;
+    animation: fish6 6500ms 3s infinite both;
+    -moz-animation:fish6 6500ms 3s infinite both;
+}
+#fish7{
+    height:90px;
+    width:90px;
+    position: absolute;
+    animation: fish7 6s 3s infinite both;
+    -moz-animation:fish7 6s 3s infinite both;
 }
 #shark{
     position: absolute;
     height:200px;
     width:auto;
-    animation:shark 6s infinite linear both;
+    animation:shark 6500ms 5s infinite linear both;
+    -moz-animation:shark 6500ms 5s infinite linear both;
 }
 .vodorosli{
     position: absolute;
     width:190px;
     height:190px;
+    transition: height 500ms;
     animation: vodorosli 3s infinite both;
+    -moz-animation: vodorosli 3s infinite both;
+}
+#stone{
+    height:150px;
+    width:auto;
+    position: absolute;
+    bottom:-5%;
+    left:50%;
+    opacity:.95;
+    z-index:-1;
+    animation:stone 4s 1500ms both;
+    -moz-animation:stone 4s 1500ms both;
+    animation-play-state: paused;
 }
 .vodorosli.first{
     bottom:-3%;
@@ -114,7 +171,7 @@ body{
     0%{
         top:1%;
         left:0;
-        transform:scale(1.00);}
+    }
     25%{
         transform:scale(1.5);
         left:30%;
@@ -136,15 +193,16 @@ body{
     0%{
         top:10%;
         left:0;
-        transform:scale(1.00);}
+        transform:scale(1.2);
+        }
     25%{
         top:20%;
         left:29%;
-        transform:scale(1.2);}
+        transform:rotate(15deg) scale(1.5);}
     50%{
         top:5%;
         left:60%;
-        transform:scale(1.05);}
+        transform:rotate(-10deg) scale(1.05);}
     75%{
         top:10%;
         left:80%;
@@ -162,9 +220,9 @@ body{
     25%{
         top:15%;
         left:20%;
-        transform:scale(1.15);}
+        transform:scale(1.15) rotate(-5deg);}
     50%{
-        transform:scale(1.06);
+        transform:scale(1.06) rotate(15deg);
         left:55%;
         top:35%;}
     75%{
@@ -186,7 +244,7 @@ body{
         left:24%;
         transform:scale(1.2);}
     50%{
-        transform:scale(1.04);
+        transform:scale(1.04) rotate(-15deg);
         left:55%;
         top:35%;}
     75%{
@@ -205,25 +263,54 @@ body{
         transform:scale(1.01);}
     25%{
         top:70%;
-        left:15%;
-        transform:scale(1.13);}
-    50%{
-        transform:scale(1.03);
+        left:22%;
+        transform:scale(1.13) rotate(-5deg);}
+    37%{
+        transform:scale(1.03) rotate(-15deg);
         left:49%;
         top:55%;}
-    75%{
-        transform:scale(1.15);
-        left:78%;
-        top:65%;}
     100%{
-        top:80%;
-        left:110%;
-        transform:scale(1.04);}
+        top:105%;
+        left:50%;
+        transform:scale(1.01) rotate(200deg);}
+}
+@keyframes fish6 {
+    0%{
+        right:-10%;
+        bottom:15%;}
+    100%{
+        right:110%;
+        bottom:20%;
+    }
+}
+@keyframes fish7 {
+    0%{
+        right:-10%;
+        bottom:20%;
+    }
+    100%{
+        right:111%;
+        bottom:26%;
+    }
+}
+@keyframes stone {
+    0%{
+       top:-10%;
+        left:30%;
+    }
+    50%{
+        transform:rotate(100deg);
+    }
+    100%{
+        top:105%;
+        left:60%;
+        transform:rotate(200deg);
+    }
 }
 @keyframes shark {
     0%{
         transform:rotate(15deg);
-        left:-25%;
+        left:-35%;
         top:50%;
     }
     100%{
@@ -231,8 +318,17 @@ body{
         left:110%;
         top:75%;
     }
+
 }
 @keyframes vodorosli {
     50%{height:250px;}
     100%{height:190px;}
 }
+/*@keyframes bg {
+    0%{
+        background:rgba(0,0,0,0);
+    }
+    100%{
+        background:rgba(0,0,0,0.5);
+    }
+}*/
