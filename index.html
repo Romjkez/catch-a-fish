@@ -3,38 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <link href="style.css" rel="stylesheet">
-    <script src="js/web_animations_API.js"></script>
-    <title>Лабораторная работа №6 | Мешков Роман</title>
+    <title>Simple aquarium</title>
 </head>
 <body>
-    <div id="preview">
-        <img id="btn" src="img/play.png" alt="Play" width="90" height="auto">
-    </div>
-    <div id="ocean"></div>
-    <main id="container">
-        <img onmouseover = "hideFish(event)" class="fish" id="fish1" src="img/fish1.png" alt="Fish">
-        <img onmouseover = "hideFish(event)" class="fish" id="fish2" src="img/fish2.png" alt="Fish">
-        <img onmouseover = "hideFish(event)" class="fish" id="fish3" src="img/fish3.png" alt="Fish">
-        <img onmouseover = "hideFish(event)" class="fish" id="fish4" src="img/fish2.png" alt="Fish">
-        <img onmouseover = "hideFish(event)" class="fish" id="fish5" src="img/fish3.png" alt="Fish">
-        <img onmouseover = "hideFish(event)" class="fish" id="fish6" src="img/fish5.png" alt="Fish">
-        <img onmouseover = "hideFish(event)" class="fish" id="fish7" src="img/fish4.png" alt="Fish">
-        <img onmouseover = "hideFish(event)" class="fish" id="shark" src="img/shark.png" alt="Shark">
-        <img class="vodorosli first" src="img/vodorosli.png" alt="Водоросли">
-        <img class="vodorosli second" src="img/vodorosli.png" alt="Водоросли">
-        <img class="vodorosli third" src="img/vodorosli.png" alt="Водоросли">
-        <img class="vodorosli fourth" src="img/vodorosli.png" alt="Водоросли">
-        <img class="vodorosli fifth" src="img/vodorosli.png" alt="Водоросли">
-        <img class="vodorosli sixth" src="img/vodorosli.png" alt="Водоросли">
-        <img class="vodorosli seventh" src="img/vodorosli.png" alt="Водоросли">
-        <img class="vodorosli eighth" src="img/vodorosli.png" alt="Водоросли">
-        <img id="stone" src="img/stone.png" alt="Камень">
-        <img class="vodorosli ninth" src="img/vodorosli.png" alt="Водоросли">
-        <img class="vodorosli tenth" src="img/vodorosli.png" alt="Водоросли">
-        <img class="vodorosli v11" src="img/vodorosli.png" alt="Водоросли">
-        <img class="vodorosli v12" src="img/vodorosli.png" alt="Водоросли">
-        <img class="vodorosli v13" src="img/vodorosli.png" alt="Водоросли">
-    </main>
-    <script defer src="js/script.js"></script>
+<div id="preview">
+    <h1>Hover fish and it will disappear!</h1>
+    <img id="btn" src="img/play.png" alt="Play" width="90" height="auto">
+</div>
+<div id="ocean"></div>
+<main id="container">
+    <img class="fish visible" id="fish1" src="img/fish1.png" alt="Fish">
+    <img class="fish visible" id="fish2" src="img/fish2.png" alt="Fish">
+    <img class="fish visible" id="fish3" src="img/fish3.png" alt="Fish">
+    <img class="fish visible" id="fish4" src="img/fish2.png" alt="Fish">
+    <img class="fish visible" id="fish5" src="img/fish3.png" alt="Fish">
+    <img class="fish visible" id="fish6" src="img/fish1.png" alt="Fish">
+    <img class="fish visible" id="fish7" src="img/fish3.png" alt="Fish">
+    <img class="fish visible" id="shark" src="img/shark.png" alt="Shark">
+    <img class="vodorosli first" src="img/vodorosli.png" alt="Водоросли">
+    <img class="vodorosli second" src="img/vodorosli.png" alt="Водоросли">
+    <img class="vodorosli third" src="img/vodorosli.png" alt="Водоросли">
+    <img class="vodorosli fourth" src="img/vodorosli.png" alt="Водоросли">
+    <img class="vodorosli fifth" src="img/vodorosli.png" alt="Водоросли">
+    <img class="vodorosli sixth" src="img/vodorosli.png" alt="Водоросли">
+    <img class="vodorosli seventh" src="img/vodorosli.png" alt="Водоросли">
+    <img class="vodorosli eighth" src="img/vodorosli.png" alt="Водоросли">
+    <img id="stone" src="img/stone.png" alt="Камень">
+    <img class="vodorosli ninth" src="img/vodorosli.png" alt="Водоросли">
+    <img class="vodorosli tenth" src="img/vodorosli.png" alt="Водоросли">
+    <img class="vodorosli v11" src="img/vodorosli.png" alt="Водоросли">
+    <img class="vodorosli v12" src="img/vodorosli.png" alt="Водоросли">
+    <img class="vodorosli v13" src="img/vodorosli.png" alt="Водоросли">
+</main>
+<script defer src="js/script.js"></script>
 </body>
 </html>

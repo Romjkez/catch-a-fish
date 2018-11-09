@@ -1,20 +1,34 @@
-var fish1 = document.getElementById('fish1'),
-    fish2 = document.getElementById('fish2'),
-    fish3 = document.getElementById('fish3'),
-    btn = document.getElementById('btn'),
-    preview = document.getElementById('preview');
-document.addEventListener('DOMContentLoaded',initial);
-function initial() {
-    document.addEventListener('click',closePreview);
+let preview = document.getElementById('preview');
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('click', closePreview);
+    document.querySelectorAll('.fish').forEach((elem) => {
+        elem.addEventListener('mouseover', hideFish)
+    });
+    preview.addEventListener('click', closePreview);
+    document.addEventListener('keypress', keyPressHandler);
+    setTimeout(function () {
+        document.querySelector('#fish5').classList.remove('visible');
+        document.querySelector('#fish5').classList.add('hideFish');
+    }, 4150)
+});
+
+function keyPressHandler(e) {
+    if (e.key === " " || e.key === 'Enter') {
+        closePreview();
+    }
 }
 function closePreview() {
-    preview.animate([{top:0},{top:'-1500px'}],{duration:1000,fill:'both',easing:'ease'});
-    document.getElementById('fish5').style.animationPlayState='running';
-    document.getElementById('stone').style.animationPlayState='running';
+    document.removeEventListener('keypress', keyPressHandler);
+    preview.classList.add('closedPreview');
+    document.getElementById('fish5').style.animationPlayState = 'running';
+    document.getElementById('stone').style.animationPlayState = 'running';
 }
+
 function hideFish(event) {
-    event.target.animate([{opacity:1,display:'block'},{opacity:0,display:'none'}],{duration:500,fill:'both',easing:'linear'});
-    setTimeout(function () {
-        event.target.style.display = 'none';
-    },500)
+    event.target.classList.add('hideFish');
+    if (document.querySelectorAll('.fish.hideFish').length >= 8) {
+        alert('No fish left!');
+    }
+
 }
