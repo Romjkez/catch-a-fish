@@ -4,7 +4,7 @@ body {
     overflow: hidden;
 }
 
-h1 {
+h1,p {
     color: #fff;
     text-align: center;
     font-family: Arial, sans-serif;
@@ -50,6 +50,20 @@ h1 {
     background: url("img/ocean.jpg") no-repeat fixed;
     background-size: cover;
     z-index: -1;
+    animation:oceanAnim 5s ease-in-out infinite;
+}
+
+@keyframes oceanAnim {
+    0%{
+        filter:opacity(100%) blur(3px);
+    }
+    50%{
+        filter:opacity(70%) blur(0);
+    }
+    100%{
+        filter:opacity(100%) blur(3px);
+    }
+
 }
 .fish{
     display: block;
@@ -221,7 +235,7 @@ h1 {
         top: -1500px;
     }
 }
-@keyframes fish1 {
+@keyframes fish1 { /* LeftToRight */
     0% {
         top: 1%;
         left: 0;
@@ -248,7 +262,7 @@ h1 {
     }
 }
 
-@keyframes fish2 {
+@keyframes fish2 { /* LeftToRight */
     0% {
         top: 10%;
         left: 0;
@@ -276,7 +290,7 @@ h1 {
     }
 }
 
-@keyframes fish3 {
+@keyframes fish3 { /* LeftToRight */
     0% {
         top: 20%;
         left: 0;
@@ -304,7 +318,7 @@ h1 {
     }
 }
 
-@keyframes fish4 {
+@keyframes fish4 { /* LeftToRight */
     0% {
         top: 50%;
         left: -1%;
@@ -332,7 +346,7 @@ h1 {
     }
 }
 
-@keyframes fish5 {
+@keyframes fish5 { /* falling fish */
     0% {
         top: 70%;
         left: -1%;
@@ -355,7 +369,7 @@ h1 {
     }
 }
 
-@keyframes fish6 {
+@keyframes fish6 { /* RightToLeft */
     0% {
         right: -10%;
         bottom: 15%;
@@ -366,7 +380,7 @@ h1 {
     }
 }
 
-@keyframes fish7 {
+@keyframes fish7 { /* RightToLeft */
     0% {
         right: -10%;
         bottom: 20%;
@@ -392,7 +406,7 @@ h1 {
     }
 }
 
-@keyframes shark {
+@keyframes shark { /* LeftToRight */
     0% {
         transform: rotate(15deg);
         left: -35%;
