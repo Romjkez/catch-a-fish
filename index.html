@@ -3,24 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <link href="style.css" rel="stylesheet">
-    <title>Simple aquarium</title>
+    <title>Catch the fish!</title>
 </head>
 <body>
 <div id="preview">
-    <h1>Hover fishes and they will disappear!</h1>
-    <p>Recommended screen resolution: 1920x1080</p>
+    <h1 id="welcomeMessage">Welcome!<br>Click fishes and earn points!<br>You have only <span style="color:red">10</span>
+        seconds!</h1>
+    <h2 id="gameResult"></h2>
+    <p class="additionalInfo">Recommended screen resolution: 1920x1080</p>
     <img id="btn" src="img/play.png" alt="Play" width="90" height="auto">
 </div>
-<div id="ocean"></div>
-<main id="container">
-    <img class="fish visible" id="fish1" src="img/fish1.png" alt="Fish">
-    <img class="fish visible" id="fish2" src="img/fish2.png" alt="Fish">
-    <img class="fish visible" id="fish3" src="img/fish3.png" alt="Fish">
-    <img class="fish visible" id="fish4" src="img/fish2.png" alt="Fish">
-    <img class="fish visible" id="fish5" src="img/fish3.png" alt="Fish">
-    <img class="fish visible" id="fish6" src="img/fish1.png" alt="Fish">
-    <img class="fish visible" id="fish7" src="img/fish3.png" alt="Fish">
-    <img class="fish visible" id="shark" src="img/shark.png" alt="Shark">
+<div id="ocean">
+    <img class="shark" id="shark" src="img/shark.png" alt="Shark">
     <img class="vodorosli first" src="img/vodorosli.png" alt="Seaweed">
     <img class="vodorosli second" src="img/vodorosli.png" alt="Seaweed">
     <img class="vodorosli third" src="img/vodorosli.png" alt="Seaweed">
@@ -29,13 +23,17 @@
     <img class="vodorosli sixth" src="img/vodorosli.png" alt="Seaweed">
     <img class="vodorosli seventh" src="img/vodorosli.png" alt="Seaweed">
     <img class="vodorosli eighth" src="img/vodorosli.png" alt="Seaweed">
-    <img id="stone" src="img/stone.png" alt="Stone">
     <img class="vodorosli ninth" src="img/vodorosli.png" alt="Seaweed">
     <img class="vodorosli tenth" src="img/vodorosli.png" alt="Seaweed">
     <img class="vodorosli v11" src="img/vodorosli.png" alt="Seaweed">
     <img class="vodorosli v12" src="img/vodorosli.png" alt="Seaweed">
     <img class="vodorosli v13" src="img/vodorosli.png" alt="Seaweed">
-</main>
+</div>
+<div class="infoBarContainer">
+    <div id="gameScore">Score<br><span>0</span></div>
+    <div id="gameTimer">Time left<br><span>10sec</span></div>
+</div>
+<main id="container"></main>
 <script defer src="js/script.js"></script>
 </body>
 </html>

@@ -2,12 +2,13 @@ body {
     padding: 0;
     margin: 0;
     overflow: hidden;
+    font-family: Arial, sans-serif;
 }
 
 h1,p {
     color: #fff;
     text-align: center;
-    font-family: Arial, sans-serif;
+
 }
 
 #preview {
@@ -15,7 +16,6 @@ h1,p {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
-    animation: bg 15s infinite both;
     z-index: 10;
 }
 
@@ -50,90 +50,69 @@ h1,p {
     background: url("img/ocean.jpg") no-repeat fixed;
     background-size: cover;
     z-index: -1;
-    animation:oceanAnim 5s ease-in-out infinite;
 }
 
-@keyframes oceanAnim {
-    0%{
-        filter:opacity(100%) blur(3px);
-    }
-    50%{
-        filter:opacity(70%) blur(0);
-    }
-    100%{
-        filter:opacity(100%) blur(3px);
-    }
-
-}
 .fish{
     display: block;
 }
 
-#fish1 {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    animation: fish1 4s infinite both;
-    -moz-animation: fish1 4s infinite both;
-}
-
-#fish2 {
-    width: 65px;
-    position: absolute;
-    height: 55px;
-    animation: fish2 5s infinite both;
-    -moz-animation: fish2 5s infinite both;
-}
-
-#fish3 {
-    width: 60px;
-    position: absolute;
-    height: 60px;
-    animation: fish3 4500ms 500ms infinite both;
-    -moz-animation: fish3 4500ms 500ms infinite both;
-}
-
-#fish4 {
-    height: 80px;
-    width: 70px;
-    position: absolute;
-    animation: fish4 4200ms infinite both;
-    -moz-animation: fish4 4200ms infinite both;
-}
-
-#fish5 {
-    height: 70px;
-    width: 70px;
-    position: absolute;
-    animation: fish5 4100ms 1s both;
-    -moz-animation: fish5 4100ms 1s both;
-    animation-play-state: paused;
-}
-
-#fish6 {
-    height: 90px;
-    width: 90px;
-    transform: scale(-1, 1);
-    position: absolute;
-    animation: fish6 6500ms 3s infinite both;
-    -moz-animation: fish6 6500ms 3s infinite both;
-}
-
-#fish7 {
-    height: 90px;
-    width: 90px;
-    transform: scale(-1, 1);
-    position: absolute;
-    animation: fish7 6s 3s infinite both;
-    -moz-animation: fish7 6s 3s infinite both;
+.fish:hover {
+    cursor: pointer;
 }
 
 #shark {
     position: absolute;
-    height: 200px;
+    height: 150px;
     width: auto;
+    opacity: .5;
     animation: shark 6500ms 5s infinite linear both;
     -moz-animation: shark 6500ms 5s infinite linear both;
+}
+
+.infoBarContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 50px;
+    z-index: 9;
+    opacity: .7;
+    background: #ffffff;
+    display: flex;
+
+}
+
+#gameResult {
+    color: #fff;
+    text-align: center;
+}
+
+#gameScore {
+    flex: 2;
+}
+
+#gameTimer {
+    flex: 3;
+}
+
+#gameTimer, #gameScore {
+    border: 2px solid #eee;
+    color: gray;
+    text-align: center;
+
+}
+
+#gameTimer span, #gameScore span {
+    font-weight: bold;
+    color: hsl(242, 63%, 29%)
+}
+
+.additionalInfo {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    text-align: center;
 }
 
 .vodorosli {
@@ -223,186 +202,12 @@ h1,p {
     left: 85%;
 }
 
-.hideFish {
-    display: none;
-}
-
 @keyframes closePreview {
     0% {
         top: 0;
     }
     100% {
         top: -1500px;
-    }
-}
-@keyframes fish1 { /* LeftToRight */
-    0% {
-        top: 1%;
-        left: 0;
-    }
-    25% {
-        transform: scale(1.5);
-        left: 30%;
-        top: 5%;
-    }
-    50% {
-        top: 10%;
-        left: 50%;
-        transform: scale(1.0);
-    }
-    75% {
-        top: 5%;
-        left: 75%;
-        transform: scale(1.5);
-    }
-    100% {
-        top: 2%;
-        left: 110%;
-        transform: scale(1.00);
-    }
-}
-
-@keyframes fish2 { /* LeftToRight */
-    0% {
-        top: 10%;
-        left: 0;
-        transform: scale(1.2);
-    }
-    25% {
-        top: 20%;
-        left: 29%;
-        transform: rotate(15deg) scale(1.5);
-    }
-    50% {
-        top: 5%;
-        left: 60%;
-        transform: rotate(-10deg) scale(1.05);
-    }
-    75% {
-        top: 10%;
-        left: 80%;
-        transform: scale(1.25);
-    }
-    100% {
-        top: 15%;
-        left: 110%;
-        transform: scale(1.05);
-    }
-}
-
-@keyframes fish3 { /* LeftToRight */
-    0% {
-        top: 20%;
-        left: 0;
-        transform: scale(1.00);
-    }
-    25% {
-        top: 15%;
-        left: 20%;
-        transform: scale(1.15) rotate(-5deg);
-    }
-    50% {
-        transform: scale(1.06) rotate(15deg);
-        left: 55%;
-        top: 35%;
-    }
-    75% {
-        transform: scale(1.2);
-        left: 75%;
-        top: 35%;
-    }
-    100% {
-        top: 40%;
-        left: 110%;
-        transform: scale(1.04);
-    }
-}
-
-@keyframes fish4 { /* LeftToRight */
-    0% {
-        top: 50%;
-        left: -1%;
-        transform: scale(1.00);
-    }
-    25% {
-        top: 59%;
-        left: 24%;
-        transform: scale(1.2);
-    }
-    50% {
-        transform: scale(1.04) rotate(-15deg);
-        left: 55%;
-        top: 35%;
-    }
-    75% {
-        transform: scale(1.2);
-        left: 81%;
-        top: 38%;
-    }
-    100% {
-        top: 38%;
-        left: 110%;
-        transform: scale(1.04);
-    }
-}
-
-@keyframes fish5 { /* falling fish */
-    0% {
-        top: 70%;
-        left: -1%;
-        transform: scale(1.01);
-    }
-    25% {
-        top: 70%;
-        left: 22%;
-        transform: scale(1.13) rotate(-5deg);
-    }
-    37% {
-        transform: scale(1.03) rotate(-15deg);
-        left: 49%;
-        top: 55%;
-    }
-    100% {
-        top: 105%;
-        left: 50%;
-        transform: scale(1.01) rotate(200deg);
-    }
-}
-
-@keyframes fish6 { /* RightToLeft */
-    0% {
-        right: -10%;
-        bottom: 15%;
-    }
-    100% {
-        right: 110%;
-        bottom: 20%;
-    }
-}
-
-@keyframes fish7 { /* RightToLeft */
-    0% {
-        right: -10%;
-        bottom: 20%;
-    }
-    100% {
-        right: 111%;
-        bottom: 26%;
-    }
-}
-
-@keyframes stone {
-    0% {
-        top: -10%;
-        left: 30%;
-    }
-    50% {
-        transform: rotate(100deg);
-    }
-    100% {
-        top: 105%;
-        left: 60%;
-        transform: rotate(200deg);
     }
 }
 
