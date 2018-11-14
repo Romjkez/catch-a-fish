@@ -1,5 +1,5 @@
 const preview = document.getElementById('preview'), container = document.getElementById('container');
-let gameTimer = 10, pScore = 0;
+let gameTimer = 15, pScore = 0;
 
 document.addEventListener('DOMContentLoaded', () => { // init function
     document.querySelectorAll('.vodorosli').forEach((elem) => {
@@ -48,10 +48,9 @@ function finishGame() {
     document.addEventListener('keypress', keyPressHandler);
     container.innerHTML = '';
     document.getElementById('gameResult').innerHTML = 'Your score: <span style="color:forestgreen">' + pScore + '</span><br>Try to earn more!';
-    gameTimer = 10;
+    gameTimer = 15;
     pScore = 0;
     document.querySelector('#gameScore>span').innerText = pScore;
-
 }
 function generateFish() {
     let fish = {'X':getRandomInRange(10,document.documentElement.clientHeight-40)+'px','Y':getRandomInRange(10,document.documentElement.clientHeight-40)+'px','direction':Math.random()>.5?'LeftToRight':'RightToLeft','type':getRandomInRange(1,3)},
@@ -69,8 +68,8 @@ function generateFish() {
     fishNode.setAttribute('src','img/fish'+fish.type+'.png');
     if(fish.direction==='RightToLeft'){fishNode.style.transform='scale(-1,1)'} // reflect horizontally
     container.appendChild(fishNode);
-    fishNode.addEventListener('click', onPlayerClickFish, event);
-    setTimeout(moveFish,500,fishNode,5);
+    fishNode.addEventListener('click', onPlayerClickFish);
+    setTimeout(moveFish, 300, fishNode, 5);
 }
 function moveFish(fishNode,counter) {
     if(counter>0){
@@ -95,7 +94,7 @@ function moveFish(fishNode,counter) {
     else if (container.contains(fishNode)) container.removeChild(fishNode);
 }
 
-function onPlayerClickFish(event) {
+function onPlayerClickFish() {
     pScore += 1;
     document.querySelector('#gameScore>span').innerText = pScore;
     container.removeChild(event.target);
