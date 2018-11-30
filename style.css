@@ -11,7 +11,6 @@ body {
 h1,p {
     color: #fff;
     text-align: center;
-
 }
 
 #preview {
@@ -37,6 +36,7 @@ h1,p {
     border-radius: 100%;
     box-shadow: 0 0 5px white;
     transition: box-shadow 500ms;
+    will-change: box-shadow;
 }
 
 #btn:hover {
@@ -65,6 +65,7 @@ h1,p {
 
 #shark {
     position: absolute;
+
     height: 150px;
     width: auto;
     opacity: .5;
@@ -213,14 +214,11 @@ h1,p {
 
 @keyframes shark {
     0% {
-        transform: rotate(15deg);
-        left: -35%;
-        top: 50%;
+        transform: rotate(15deg) translate(-100%,150%);
+
     }
     100% {
-        transform: rotate(0deg);
-        left: 110%;
-        top: 75%;
+        transform: rotate(0deg) translate(700%,250%);
     }
 }
 
