@@ -3,6 +3,9 @@ body {
     margin: 0;
     overflow: hidden;
     font-family: Arial, sans-serif;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 h1,p {
@@ -14,7 +17,7 @@ h1,p {
 #preview {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.6);
     z-index: 10;
 }
@@ -203,15 +206,12 @@ h1,p {
 }
 
 @keyframes closePreview {
-    0% {
-        top: 0;
-    }
     100% {
-        top: -1500px;
+        transform: translateY(-1500px);
     }
 }
 
-@keyframes shark { /* LeftToRight */
+@keyframes shark {
     0% {
         transform: rotate(15deg);
         left: -35%;

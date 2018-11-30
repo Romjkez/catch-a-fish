@@ -17,7 +17,7 @@ function keyPressHandler(e) {
 
 function closePreview() { // preview closing function
     document.removeEventListener('keypress', keyPressHandler);
-    if (document.getElementById('welcomeMessage').style.display = 'inline') document.getElementById('welcomeMessage').style.display = 'none';
+    if (document.getElementById('welcomeMessage').style.display === '') document.getElementById('welcomeMessage').style.display = 'none';
     preview.classList.add('closedPreview');
     startGame()
 }
