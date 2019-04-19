@@ -50,7 +50,7 @@ h1,p {
     left: 0;
     height: 100%;
     width: 100%;
-    background: url("img/ocean.jpg") no-repeat fixed;
+    background: url("../img/ocean.jpg") no-repeat fixed;
     background-size: cover;
     z-index: -1;
 }

@@ -1,0 +1,30 @@
+{
+  "name": "catch-a-fish",
+  "version": "1.0.0",
+  "description": "At the beginning it was a simple aquarium with some fishes and shark disappearing when you hover them. ## Now It is a game with randomly spawning fishes, which you should catch. You can start the game by clicking \"Play\" button or pressing \"Space\" or \"Enter\".  When you click a fish, it disappears and you earn 1 point. You have 15 seconds to earn as many points as you can!",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Romjkez/catch-a-fish.git"
+  },
+  "author": "Roman Meshkov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Romjkez/catch-a-fish/issues"
+  },
+  "homepage": "https://github.com/Romjkez/catch-a-fish#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "autoprefixer": "^9.5.1",
+    "cssnano": "^4.1.10",
+    "del": "^4.1.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-uglify": "^3.0.2"
+  }
+}
